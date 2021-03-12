@@ -1,0 +1,46 @@
+<header class="header">
+<div class="navigation">
+{% if page.full_logo %}
+<a href="{{ site.url }}" class="logo">{{ site.title }}</a>
+{% else %}
+<a href="{{ site.url }}" class="logo">{{ site.short_logo }}</a>
+{% endif %}
+<ul class="menu">
+<li class="menu__entry"><a href="{{ site.url }}">about</a></li>
+<li class="menu__entry"><a href="{{ site.url }}/projects">projects</a></li>
+<li class="menu__entry"><a href="{{ site.url }}/posts">posts</a></li>
+</ul>
+</div>
+<ul class="social-links">
+{% if site.author.twitter %}
+<a href="https://twitter.com/{{ site.author.twitter }}" class="social-links__entry" target="_blank">
+<i class="fab fa-twitter" aria-hidden="true"></i>
+</a>
+{% endif %}
+{% if site.author.scholar %}
+<a href="https://scholar.google.com/citations?user={{ site.author.scholar }}&hl=en" class="social-links__entry" target="_blank">
+<i class="fa fa-graduation-cap"></i>
+</a>
+{% endif %}
+{% if site.author.github %}
+<a href="https://github.com/{{ site.author.github }}" class="social-links__entry" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+{% endif %}
+{% if site.author.linkedin %}
+<a href="https://in.linkedin.com/in/{{ site.author.linkedin }}" class="social-links__entry" target="_blank">
+<i class="fab fa-linkedin-in"></i>
+</a>
+{% endif %}
+{% if site.author.email %}
+<a href="mailto:{{ site.author.email }}" class="social-links__entry" target="_blank">
+<i class="fa fa-envelope"></i>
+</a>
+{% endif %}
+{% if site.rss %}
+<a href="{{ site.url }}/feed.xml" class="social-links__entry" target="_blank">
+<i style="color: rgba( 254, 164, 1, 100%);" class="fas fa-rss"></i>
+</a>
+{% endif %}
+</ul>
+</header>

@@ -1,0 +1,7 @@
+{% if page.splash_img_source %}
+<img id="splash-img" src="{{ site.url }}{{ page.splash_img_source }}" alt="{{ page.splash_img_caption | strip_html }}">
+{% endif %}
+
+{% if page.splash_img_caption %}
+<p class="text-muted caption">{{ page.splash_img_caption }}</p>
+{% endif %}
