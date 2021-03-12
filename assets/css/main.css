@@ -18,6 +18,9 @@
   .lh-0{
     line-height: 25px;
   }
+  .mw-0{
+    max-width:768px;
+  }
 
   h1, h2, h3, h4, h5, h6 {
     color: #212529;
