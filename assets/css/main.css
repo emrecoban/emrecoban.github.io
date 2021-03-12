@@ -14,8 +14,11 @@
 
   p, ul, ol, dl {
     font-size: 100%;
-    line-height: 32px; }
-  
+    line-height: 29px; }
+  .lh-0{
+    line-height: 25px;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     color: #212529;
     padding-top: 20px;
