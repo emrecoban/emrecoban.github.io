@@ -48,4 +48,7 @@ compress_html:
   profile: false
   startings: [html, head, body]
 
+plugins:
+  - jemoji
+
 rss: true # RSS feed icon on or off

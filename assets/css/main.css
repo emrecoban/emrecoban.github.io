@@ -13,7 +13,9 @@
   a {
     color: #57A;
     text-decoration: none; }
-  
+  img.emoji {
+    display: inline;
+  }
 
   p, ul, ol, dl {
     font-size: 100%;
