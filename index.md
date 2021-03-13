@@ -16,33 +16,33 @@ sitemap:
 <p class="text-justify mw-0">I live in Samsun, Turkey and enjoy spending my free time reading scientific book & article and novel, hanging out with friends as an asocial, learning new things about software development, watching TV series in English as my second language, and  surfing on the internet.</p>
 ****
 <h4>Experience</h4>
-<h6><i class="fa fa-building"></i> <b>Samsun Vocational and Technical High School</b></h6>
+<h6><i class="fa fa-building"></i> <b>Samsun Vocational and Technical HS</b></h6>
 <h6 class="mb-2 p-0"><i class="fa fa-id-card" aria-hidden="true"></i> <b>Computer Teacher Intern</b></h6>
 <h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> Sep 2017 – May 2018 &middot; Samsun, Turkey</h6>
 <h6 class="mb-2 p-0 font-weight-normal text-info"><i class="fa fa-link" aria-hidden="true"></i> <em>for bachelor's degree.</em></h6>
-<p class="text-justify lh-0 mw-0">I enjoy spending my free time reading scientific book & article and novel, hanging out with friends as an asocial, learning new things about software development, watching TV series in English as my second language, and  surfing on the internet.</p>
+<p class="text-justify lh-0 mw-0">I taught high school students about Arduino and evaluated the students' work.</p>
 
 <h6><i class="fa fa-building"></i> <b>Side Internet ve Bilisim Teknolojileri</b></h6>
 <h6 class="mb-2 p-0"><i class="fa fa-id-card" aria-hidden="true"></i> <b>Web Developer Intern</b></h6>
 <h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> Jun 2014 – Aug 2014 &middot; Samsun, Turkey</h6>
 <h6 class="mb-2 p-0 font-weight-normal text-info"><i class="fa fa-link" aria-hidden="true"></i> <em>for associate degree.</em></h6>
-<p class="text-justify lh-0 mw-0">I enjoy spending my free time reading scientific book & article and novel, hanging out with friends as an asocial, learning new things about software development, watching TV series in English as my second language, and  surfing on the internet.</p>
+<p class="text-justify lh-0 mw-0">I converted the designs in the format of PSD and PNG to HTML/CSS, and then coded in Classic ASP.</p>
 
 <h6><i class="fa fa-building"></i> <b>Kayrasoft Yazilim ve Bilisim Teknolojileri</b></h6>
 <h6 class="mb-2 p-0"><i class="fa fa-id-card" aria-hidden="true"></i> <b>Web Developer</b></h6>
 <h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> Jul 2013 – Apr 2014 &middot; Samsun, Turkey</h6>
-<p class="text-justify lh-0 mw-0">I enjoy spending my free time reading scientific book & article and novel, hanging out with friends as an asocial, learning new things about software development, watching TV series in English as my second language, and  surfing on the internet.</p>
+<p class="text-justify lh-0 mw-0">I converted the designs in the format of PSD and PNG to HTML/CSS, and then developed corporate websites in Classic ASP. During the developing I used JavaScript and jQuery for effective results. For the database operations I used MySQL and MS Access. The websites I developed are programmed for simple operations such as presenting brand identity. Therefore, most of the time I worked on the operations of CRUD. Also I helped interns to develop websites.</p>
 
 <h6><i class="fa fa-building"></i> <b>KA Bilisim Teknolojileri</b></h6>
 <h6 class="mb-2 p-0"><i class="fa fa-id-card" aria-hidden="true"></i> <b>Web Developer Intern</b></h6>
 <h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> Jun 2012 – Nov 2012 &middot; Samsun, Turkey</h6>
 <h6 class="mb-2 p-0 font-weight-normal text-info"><i class="fa fa-link" aria-hidden="true"></i> <em>for high school degree.</em></h6>
-<p class="text-justify lh-0 mw-0">I enjoy spending my free time reading scientific book & article and novel, hanging out with friends as an asocial, learning new things about software development, watching TV series in English as my second language, and  surfing on the internet.</p>
+<p class="text-justify lh-0 mw-0">I converted the designs in the format of PSD and PNG to HTML/CSS, and then developed corporate websites in Classic ASP. During the developing I used JavaScript and jQuery for effective results. For the database operations I used MySQL, MSSQL and MS Access. The websites I developed are programmed for simple operations such as presenting brand identity. Therefore, most of the time I worked on the operations of CRUD. Outside of that I worked on a few projects for ministry and governorship. In one of the projects, the construction projects in Turkey were followed. In the other project, women's health in all of the city were followed.</p>
 
 <h6><i class="fa fa-building"></i> <b>@localhost</b></h6>
 <h6 class="mb-2 p-0"><i class="fa fa-id-card" aria-hidden="true"></i> <b>freelance software developer</b></h6>
 <h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> 2007 – Present &middot; Everywhere</h6>
-<p class="text-justify lh-0 mw-0">I enjoy spending my free time reading scientific book & article and novel, hanging out with friends as an asocial, learning new things about software development, watching TV series in English as my second language, and  surfing on the internet.</p>
+<p class="text-justify lh-0 mw-0">Anything can happen at any moment.</p>
 ****
 <h4>Education</h4>
 <h6><i class="fa fa-university"></i> <b>Amasya University</b></h6>
@@ -51,7 +51,7 @@ sitemap:
 <h6 class="mb-2 p-0 text-info"><i class="fa fa-paperclip" aria-hidden="true"></i> <b>Web App to Measure <abbr title="Computational Thinking">CT</abbr> Skills</b></h6>
 <h6 class="mb-2 p-0 text-success"><i class="fa fa-user" aria-hidden="true"></i> <em>Advisor: Prof. Dr. Özgen KORKMAZ</em></h6>
 <h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> 2018 – Present &middot; Amasya, Turkey</h6>
-<p class="text-justify lh-0 mw-0">I enjoy spending my free time reading scientific book & article and novel, hanging out with friends as an asocial, learning new things about software development, watching TV series in English as my second language, and  surfing on the internet.</p>
+<p class="text-justify lh-0 mw-0">* [SPSS, Writing Paper]</p>
 
 <h6><i class="fa fa-university"></i> <b>Ondokuz Mayıs University</b></h6>
 <h6 class="mb-2 p-0"><i class="fa fa-graduation-cap" aria-hidden="true"></i> <b><abbr title="Computer Education and Instructional Technology">CEIT</abbr></b> &middot; <em class="text-success font-weight-normal">GPA: 3,43 / 4</em></h6>
@@ -59,21 +59,21 @@ sitemap:
 <h6 class="mb-2 p-0 text-info"><i class="fa fa-paperclip" aria-hidden="true"></i> <b>Android Application for Disabled People</b></h6>
 <h6 class="mb-2 p-0 text-success"><i class="fa fa-user" aria-hidden="true"></i> <em>Advisor: Dr. Polat ŞENDURUR</em></h6>
 <h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> 2016 – 2018 &middot; Samsun, Turkey</h6>
-<p class="text-justify lh-0 mw-0">I enjoy spending my free time reading scientific book & article and novel, hanging out with friends as an asocial, learning new things about software development, watching TV series in English as my second language, and  surfing on the internet.</p>
+<p class="text-justify lh-0 mw-0">* [Adobe Illustrator, Scratch, MS Kudo, SPSS, Education Sciences]</p>
 
 <h6><i class="fa fa-university"></i> <b>Ondokuz Mayıs University</b></h6>
 <h6 class="mb-2 p-0"><i class="fa fa-graduation-cap" aria-hidden="true"></i> <b>Computer Programming</b> &middot; <em class="text-success font-weight-normal">GPA: 3,46 / 4</em></h6>
 <h6 class="mb-2 p-0"><i class="fa fa-level-up" aria-hidden="true"></i> <b>Associate of Science</b></h6>
 <h6 class="mb-2 p-0 text-info"><i class="fa fa-paperclip" aria-hidden="true"></i> <b><abbr title="Content Management System">CMS</abbr> for Values Education</b></h6>
 <h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> 2013 – 2015 &middot; Samsun, Turkey</h6>
-<p class="text-justify lh-0 mw-0">I enjoy spending my free time reading scientific book & article and novel, hanging out with friends as an asocial, learning new things about software development, watching TV series in English as my second language, and  surfing on the internet.</p>
+<p class="text-justify lh-0 mw-0">* [Python, C#, SQL, HTML/CSS/JavaScript, Java]</p>
 
-<h6><i class="fa fa-university"></i> <b>Atakum Vocational and Technical Anatolian HS</b></h6>
+<h6><i class="fa fa-university"></i> <b>Atakum Vocational and Technical HS</b></h6>
 <h6 class="mb-2 p-0"><i class="fa fa-graduation-cap" aria-hidden="true"></i> <b>Web Programming</b> &middot; <em class="text-success font-weight-normal">GPA: 73,01 / 100</em></h6>
 <h6 class="mb-2 p-0"><i class="fa fa-level-up" aria-hidden="true"></i> <b>High School</b></h6>
-<h6 class="mb-2 p-0 text-info"><i class="fa fa-paperclip" aria-hidden="true"></i> <b>Websites</b></h6>
+<h6 class="mb-2 p-0 text-info"><i class="fa fa-paperclip" aria-hidden="true"></i> <b>Program to Control PC via SMS</b></h6>
 <h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> 2009 – 2013 &middot; Samsun, Turkey</h6>
-<p class="text-justify lh-0 mw-0">I enjoy spending my free time reading scientific book & article and novel, hanging out with friends as an asocial, learning new things about software development, watching TV series in English as my second language, and  surfing on the internet.</p>
+<p class="text-justify lh-0 mw-0">* [ASP.Net, Microsoft Excel & Access, Adobe Flash & Dreamweaver]</p>
 ****
 <h4>Publication</h4>
 <p class="text-justify lh-0 mw-0" style="text-indent: 5%;">Erdoğmuş, C., <span class="font-weight-bold">Çoban, E.</span>, Korkmaz, Ö., & Özden, M. Y. (2020). Technological Formation Scale for Teachers (TFS): Development and Validation. <em>Participatory Educational Research</em>, 8(2), 260-279. <a target="_blank" href="https://doi.org/10.17275/per.21.39.8.2">https://doi.org/10.17275/per.21.39.8.2</a></p>
