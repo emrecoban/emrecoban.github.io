@@ -82,7 +82,7 @@ sitemap:
 ****
 <h4>Accomplishment</h4>
 <h6 class="text-warning"><i class="fa fa-star" aria-hidden="true"></i> <b>Scholarship</b></h6>
-<h6 class="mb-2 p-0 text-info"><i class="fa fa-info-circle"></i> Suna ve İnan Kıraç Vakfı &middot; 2019</h6>
+<h6 class="mb-2 p-0 text-info"><i class="fa fa-info-circle"></i> Suna ve İnan Kıraç Foundation &middot; 2019</h6>
 
 <h6 class="text-warning"><i class="fa fa-star" aria-hidden="true"></i> <b>Honor Student</b></h6>
 <h6 class="mb-2 p-0 text-info"><i class="fa fa-info-circle"></i> Ondokuz Mayıs University &middot; 2015</h6>
