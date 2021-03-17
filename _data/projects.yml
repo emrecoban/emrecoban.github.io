@@ -1,3 +1,17 @@
+- name: Mentalist Theme # Project name, also used as heading
+  id: mentalist # Project id, must be unique amongst the projects
+  img_src: /assets/img/projects/mentalist.png # Optional image
+  description_less: > # Description shown at all times
+    <p>It is a theme built with Bootstrap.</p> 
+  description_more: > # Description shown only when the project card is expanded
+    <p>The theme is fully responsive, and has the pages of home, about, team, services, 404, sample, contact.</p> 
+
+    <a href="https://rawcdn.githack.com/emrecoban/Mentalist-Theme-Bootstrap/e44e8e3b8870ac892b0f8f5bcc5cc01dd01eb88d/index.html" target="_blank" class="btn btn-dark mb-1"><i class="fas fa-link"></i> &nbsp View Project</a>
+    <a href="https://github.com/emrecoban/Mentalist-Theme-Bootstrap" target="_blank" class="btn btn-dark mb-1"><i class="fas fa-code-branch"></i> &nbsp Repository</a>
+    <!--<a href="#Soon" target="_blank" class="btn btn-dark mb-1"><i class="fas fa-align-right"></i> &nbsp Blog Post</a>-->
+
+  tags: [theme, bootstrap, responsive] # A list of tags
+
 - name: Lite Company Theme # Project name, also used as heading
   id: lite-company # Project id, must be unique amongst the projects
   img_src: /assets/img/projects/lite-company.png # Optional image

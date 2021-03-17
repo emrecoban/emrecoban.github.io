@@ -11,11 +11,12 @@ sitemap:
 <p id="describe-text">MSc. Student in the Department of <abbr title="Computer Education and Instructional Technology">CEIT</abbr> at Amasya University, Turkey.</p>
 
 <h4>Who I am </h4>
-<p class="text-left mw-0">My name is Emre. I am currently a MSc. student in the Department of Computer Education and Instructional Technology at Amasya University, Turkey :school:. My master thesis is focused on computational thinking. During the thesis term I try to develop the web app, which is a reliable and valid to measure high school students' computational thinking skills :microscope:. Also I make scientific studies on computer science education :page_facing_up:.</p>
-<p class="text-left mw-0">I graduated from industrial vocational high school, where I studied in the branch of web programming :mortar_board:. While I was in high school, I worked as a web developer intern. Although I started developing websites in 2007, I got my first job in 2012 :briefcase:. In the past, I have worked on websites, android apps, and web based internal systems for some of the small software companies and clients :computer:. My main experience is in back and front ends development with using the operations of CRUD :key:. Also I can make this happen for your business as well, don’t hesitate to get in touch :mailbox:.</p>
-<p class="text-left mw-0">I live in Samsun, Turkey :herb: and enjoy spending my free time reading scientific book & article and novel :books:, hanging out with friends as an asocial, learning new things about software development, watching TV series in English as my second language, and  surfing on the internet.</p>
-* I'm currently working on PHP, MySQL, and Bootstrap.
-* I'm currently learning Flutter and Dart.
+<p class="text-justify mw-0">My name is Emre. I am currently a MSc. student in the Department of Computer Education and Instructional Technology at Amasya University, Turkey :school:. My master thesis is focused on computational thinking. During the thesis term I try to develop the web app, which is a reliable and valid to measure high school students' computational thinking skills :microscope:. Also I make scientific studies on computer science education :page_facing_up:.</p>
+<p class="text-justify mw-0">I graduated from industrial vocational high school, where I studied in the branch of web programming :mortar_board:. While I was in high school, I worked as a web developer intern. Although I started developing websites in 2007, I got my first job in 2012 :briefcase:. In the past, I have worked on websites, android apps, and web based internal systems for some of the small software companies and clients :computer:. My main experience is in back and front ends development with using the operations of CRUD :key:. Also I can make this happen for your business as well, don’t hesitate to get in touch :mailbox:.</p>
+<p class="text-justify mw-0">I live in Samsun, Turkey :herb: and enjoy spending my free time reading scientific book & article and novel :books:, hanging out with friends as an asocial, learning new things about software development, watching TV series in English as my second language, listening to loud music :notes:, and  surfing on the internet.</p>
+* :running: I'm currently working on PHP, MySQL, Bootstrap.
+* :dizzy: I'm currently learning Flutter, Dart.
+* :speech_balloon: Ask me about Android Development, PHP, Bootstrap.
 
 ****
 <h4>Experience</h4>
@@ -54,7 +55,9 @@ sitemap:
 <h6 class="mb-2 p-0 text-info"><i class="fa fa-paperclip" aria-hidden="true"></i> <b>Web App to Measure <abbr title="Computational Thinking">CT</abbr> Skills</b></h6>
 <h6 class="mb-2 p-0 text-success"><i class="fa fa-user" aria-hidden="true"></i> <em>Advisor: Prof. Dr. Özgen KORKMAZ</em></h6>
 <h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> 2018 – Present &middot; Amasya, Turkey</h6>
-<p class="text-justify lh-0 mw-0">* [SPSS, Writing Paper]</p>
+<p class="text-left lh-0 mw-0 mb-0">:books: Lessons learned:</p>
+* Scientific Methods
+* IBM SPSS
 
 <h6><i class="fa fa-university"></i> <b>Ondokuz Mayıs University</b></h6>
 <h6 class="mb-2 p-0"><i class="fa fa-graduation-cap" aria-hidden="true"></i> <b><abbr title="Computer Education and Instructional Technology">CEIT</abbr></b> &middot; <em class="text-success font-weight-normal">GPA: 3,43 / 4</em></h6>
@@ -62,21 +65,52 @@ sitemap:
 <h6 class="mb-2 p-0 text-info"><i class="fa fa-paperclip" aria-hidden="true"></i> <b>Android Application for Disabled People</b></h6>
 <h6 class="mb-2 p-0 text-success"><i class="fa fa-user" aria-hidden="true"></i> <em>Advisor: Dr. Polat ŞENDURUR</em></h6>
 <h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> 2016 – 2018 &middot; Samsun, Turkey</h6>
-<p class="text-justify lh-0 mw-0">* [Adobe Illustrator, Scratch, MS Kudo, SPSS, Education Sciences]</p>
+<p class="text-left lh-0 mw-0 mb-0">:books: Lessons learned:</p>
+* Educational Psychology
+* Educational Assessment
+* Instructional Design
+* Adobe Illustrator
+* Microsoft Kudo
+* MIT Scratch
+* IBM SPSS
+* Computer Hardware
 
 <h6><i class="fa fa-university"></i> <b>Ondokuz Mayıs University</b></h6>
 <h6 class="mb-2 p-0"><i class="fa fa-graduation-cap" aria-hidden="true"></i> <b>Computer Programming</b> &middot; <em class="text-success font-weight-normal">GPA: 3,46 / 4</em></h6>
 <h6 class="mb-2 p-0"><i class="fa fa-level-up" aria-hidden="true"></i> <b>Associate of Science</b></h6>
 <h6 class="mb-2 p-0 text-info"><i class="fa fa-paperclip" aria-hidden="true"></i> <b><abbr title="Content Management System">CMS</abbr> for Values Education</b></h6>
 <h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> 2013 – 2015 &middot; Samsun, Turkey</h6>
-<p class="text-justify lh-0 mw-0">* [Python, C#, SQL, HTML/CSS/JavaScript, Java]</p>
+<p class="text-left lh-0 mw-0 mb-0">:books: Lessons learned:</p>
+* Python
+* Java
+* C#
+* HTML/CSS
+* JavaScript
+* MySQL/SQL
+* Autodesk 3ds Max
+* Computer Networking
 
 <h6><i class="fa fa-university"></i> <b>Atakum Vocational and Technical HS</b></h6>
 <h6 class="mb-2 p-0"><i class="fa fa-graduation-cap" aria-hidden="true"></i> <b>Web Programming</b> &middot; <em class="text-success font-weight-normal">GPA: 73,01 / 100</em></h6>
 <h6 class="mb-2 p-0"><i class="fa fa-level-up" aria-hidden="true"></i> <b>High School</b></h6>
 <h6 class="mb-2 p-0 text-info"><i class="fa fa-paperclip" aria-hidden="true"></i> <b>Program to Control PC via SMS</b></h6>
 <h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> 2009 – 2013 &middot; Samsun, Turkey</h6>
-<p class="text-justify lh-0 mw-0">* [ASP.Net, Microsoft Excel & Access, Adobe Flash & Dreamweaver]</p>
+<p class="text-left lh-0 mw-0 mb-0">:books: Lessons learned:</p>
+* ASP.Net
+* C#
+* MSSQL
+* Pseudocode
+* HTML/CSS
+* Microsoft Visual Studio
+* Microsoft Excel
+* Microsoft Access
+* Microsoft Word
+* Adobe Flash
+* Adobe Dreamvewaer
+* Adobe Fireworks
+* Computer Networking
+* Computer Hardware
+
 ****
 <h4>Publication</h4>
 <p class="text-justify lh-0 mw-0" style="text-indent: 5%;">Erdoğmuş, C., <span class="font-weight-bold">Çoban, E.</span>, Korkmaz, Ö., & Özden, M. Y. (2020). Technological Formation Scale for Teachers (TFS): Development and Validation. <em>Participatory Educational Research</em>, 8(2), 260-279. <a target="_blank" href="https://doi.org/10.17275/per.21.39.8.2">https://doi.org/10.17275/per.21.39.8.2</a></p>
