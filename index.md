@@ -30,18 +30,18 @@ sitemap:
 <h6 class="mb-2 p-0"><i class="fa fa-id-card" aria-hidden="true"></i> <b>Web Developer Intern</b></h6>
 <h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> Jun 2014 – Aug 2014 &middot; Samsun, Turkey</h6>
 <h6 class="mb-2 p-0 font-weight-normal text-info"><i class="fa fa-link" aria-hidden="true"></i> <em>for associate degree.</em></h6>
-<p class="text-justify lh-0 mw-0">I converted the designs in the format of PSD and PNG to HTML/CSS, and then coded in Classic ASP.</p>
+<p class="text-justify lh-0 mw-0">I converted the designs in the format of PSD or PNG to HTML/CSS, and then coded in Classic ASP.</p>
 
 <h6><i class="fa fa-building"></i> <b>Kayrasoft Yazilim ve Bilisim Teknolojileri</b></h6>
 <h6 class="mb-2 p-0"><i class="fa fa-id-card" aria-hidden="true"></i> <b>Web Developer</b></h6>
 <h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> Jul 2013 – Apr 2014 &middot; Samsun, Turkey</h6>
-<p class="text-justify lh-0 mw-0">I converted the designs in the format of PSD and PNG to HTML/CSS, and then developed corporate websites in Classic ASP. During the developing I used JavaScript and jQuery for effective results. For the database operations I used MySQL and MS Access. The websites I developed are programmed for simple operations such as presenting brand identity. Therefore, most of the time I worked on the operations of CRUD. Also I helped interns to develop websites.</p>
+<p class="text-justify lh-0 mw-0">I converted the designs in the format of PSD or PNG to HTML/CSS, and then developed corporate websites in Classic ASP. During the developing I used JavaScript and jQuery for effective results. For the database operations I used MySQL and MS Access. The websites I developed are programmed for simple operations such as presenting brand identity. Therefore, most of the time I worked on the operations of CRUD. Also I helped interns to develop websites.</p>
 
 <h6><i class="fa fa-building"></i> <b>KA Bilisim Teknolojileri</b></h6>
 <h6 class="mb-2 p-0"><i class="fa fa-id-card" aria-hidden="true"></i> <b>Web Developer Intern</b></h6>
 <h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> Jun 2012 – Nov 2012 &middot; Samsun, Turkey</h6>
 <h6 class="mb-2 p-0 font-weight-normal text-info"><i class="fa fa-link" aria-hidden="true"></i> <em>for high school degree.</em></h6>
-<p class="text-justify lh-0 mw-0">I converted the designs in the format of PSD and PNG to HTML/CSS, and then developed corporate websites in Classic ASP. During the developing I used JavaScript and jQuery for effective results. For the database operations I used MySQL, MSSQL and MS Access. The websites I developed are programmed for simple operations such as presenting brand identity. Therefore, most of the time I worked on the operations of CRUD. Outside of that I worked on a few projects for ministry and governorship. In one of the projects, the construction projects in Turkey were followed. In the other project, women's health in all of the city were followed.</p>
+<p class="text-justify lh-0 mw-0">I converted the designs in the format of PSD or PNG to HTML/CSS, and then developed corporate websites in Classic ASP. During the developing I used JavaScript and jQuery for effective results. For the database operations I used MySQL, MSSQL and MS Access. The websites I developed are programmed for simple operations such as presenting brand identity. Therefore, most of the time I worked on the operations of CRUD. Outside of that I worked on a few projects for ministry and governorship. In one of the projects, the construction projects in Turkey were followed. In the other project, women's health in all of the city were followed.</p>
 
 <h6><i class="fa fa-building"></i> <b>@localhost</b></h6>
 <h6 class="mb-2 p-0"><i class="fa fa-id-card" aria-hidden="true"></i> <b>freelance software developer</b></h6>
@@ -83,10 +83,12 @@ sitemap:
 <p class="text-left lh-0 mw-0 mb-0">:books: Lessons learned:</p>
 * Python
 * Java
+* C
 * C#
 * HTML/CSS
 * JavaScript
 * MySQL/SQL
+* Pseudocode and Flowchart
 * Autodesk 3ds Max
 * Computer Networking
 
@@ -99,7 +101,7 @@ sitemap:
 * ASP.Net
 * C#
 * MSSQL
-* Pseudocode
+* Pseudocode and Flowchart
 * HTML/CSS
 * Microsoft Visual Studio
 * Microsoft Excel

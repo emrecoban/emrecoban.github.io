@@ -25,3 +25,16 @@
     <!--<a href="#Soon" target="_blank" class="btn btn-dark mb-1"><i class="fas fa-align-right"></i> &nbsp Blog Post</a>-->
 
   tags: [theme, bootstrap, responsive] # A list of tags
+
+- name: Values Education # Project name, also used as heading
+  id: values-education # Project id, must be unique amongst the projects
+  img_src: /assets/img/projects/values-education.png # Optional image
+  description_less: > # Description shown at all times
+    <p>Content Management System for Values Education.</p> 
+  description_more: > # Description shown only when the project card is expanded
+    <p>The project was made in 2015 with Classic ASP.</p> 
+
+    <a href="https://github.com/emrecoban/values-education" target="_blank" class="btn btn-dark mb-1"><i class="fas fa-code-branch"></i> &nbsp Repository</a>
+    <!--<a href="#Soon" target="_blank" class="btn btn-dark mb-1"><i class="fas fa-align-right"></i> &nbsp Blog Post</a>-->
+
+  tags: [cms, education, classic-asp] # A list of tags
