@@ -17,6 +17,16 @@ sitemap:
 * :running: I'm currently working on PHP, MySQL, Bootstrap.
 * :dizzy: I'm currently learning Flutter, Dart.
 * :speech_balloon: Ask me about Android Development, PHP, Bootstrap.
+<h4>Last posts</h4>
+<ul>
+{% for post in site.posts limit:10 %}   
+    {% unless post.listed == false %}
+        {% if post.pin != true %}
+        <li>{{ post.date | date: "%b %e, 20%y" }} &middot; <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
+    {% endunless %}   
+{% endfor %}
+</ul>
 
 ****
 <h4>Experience</h4>
