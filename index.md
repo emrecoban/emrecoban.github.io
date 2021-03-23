@@ -8,15 +8,15 @@ sitemap:
   priority: 1.0
 ---
 <img src="assets/img/emre.jpg" class="rounded-circle shadow" style="width:150px;" alt="it's emre.">
-<p id="describe-text">MSc. Student in the Department of <abbr title="Computer Education and Instructional Technology">CEIT</abbr> at Amasya University, Turkey.</p>
+<p id="describe-text">MSc. Student in the Department of <abbr title="Computer Education and Instructional Technology">CEIT</abbr> at Amasya University.</p>
 
 <h4>Who I am </h4>
-<p class="text-justify mw-0">My name is Emre. I am currently a MSc. student in the Department of Computer Education and Instructional Technology at Amasya University, Turkey :school:. My master thesis is focused on computational thinking. During the thesis term I try to develop the web app, which is a reliable and valid to measure high school students' computational thinking skills :microscope:. Also I make scientific studies on computer science education :page_facing_up:.</p>
-<p class="text-justify mw-0">I graduated from industrial vocational high school, where I studied in the branch of web programming :mortar_board:. While I was in high school, I worked as a web developer intern. Although I started developing websites in 2007, I got my first job in 2012 :briefcase:. In the past, I have worked on websites, android apps, and web based internal systems for some of the small software companies and clients :computer:. My main experience is in back and front ends development with using the operations of CRUD :key:. Also I can make this happen for your business as well, don’t hesitate to get in touch :mailbox:.</p>
-<p class="text-justify mw-0">I live in Samsun, Turkey :herb: and enjoy spending my free time reading scientific book & article and novel :books:, hanging out with friends as an asocial, learning new things about software development, watching TV series in English as my second language, listening to loud music :notes:, and  surfing on the internet.</p>
-* :running: I'm currently working on PHP, MySQL, Bootstrap.
-* :dizzy: I'm currently learning Flutter, Dart.
-* :speech_balloon: Ask me about Android Development, PHP, Bootstrap.
+<p class="text-justify mw-0">My name is Emre. I am currently a MSc. student in the Department of Computer Education and Instructional Technology at Amasya University, Turkey 🏫. My master thesis is focused on computational thinking 🔭. During the thesis term I try to develop the web app, which is a reliable and valid to measure high school students' computational thinking skills 🔬. Also I make scientific studies on computer science education 🔍.</p>
+<p class="text-justify mw-0">I graduated from industrial vocational high school, where I studied in the branch of web programming 🎓. While I was in high school, I worked as a web developer intern. Although I started developing websites in 2007, I got my first job in 2012 💼. In the past, I have worked on websites, android apps, and web based internal systems for some of the small software companies and clients 🖥️. My main experience is in back and front ends development with using the operations of CRUD 🔑. Also I can make this happen for your business as well, don’t hesitate to get in touch 📭.</p>
+<p class="text-justify mw-0">I live in Samsun, Turkey 🌿 and enjoy spending my free time reading scientific book & article and novel 📚, hanging out with friends as an asocial 🥂, learning new things about software development ✍️, watching TV series in English as my second language 📺, listening to loud music 🎶, and  surfing on the internet 🌐.</p>
+* 🏃 I'm currently working on PHP, MySQL, Bootstrap.
+* ✨ I'm currently learning Flutter, Dart.
+* 💬 Ask me about Android Development, PHP, Bootstrap.
 <h4>Last posts</h4>
 <ul>
 {% for post in site.posts limit:10 %}   
@@ -138,4 +138,5 @@ sitemap:
 
 <h6 class="text-warning"><i class="fa fa-star" aria-hidden="true"></i> <b>Languages</b></h6>
 <h6 class="mb-2 p-0 text-info"><i class="fa fa-info-circle"></i> English (Limited working proficiency)</h6>
+- I can write in English with help from the dictionary. I'm not good at speaking and listening in English. However, I can introduce myself, a product, or something like that, and go abroad and live. Also I've written a scientific article in English before.
 <h6 class="mb-2 p-0 text-info"><i class="fa fa-info-circle"></i> Turkish (Native)</h6>
