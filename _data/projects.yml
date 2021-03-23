@@ -26,6 +26,19 @@
 
   tags: [theme, bootstrap, responsive] # A list of tags
 
+- name: Dikey Geçiş Asistanı # Project name, also used as heading
+  id: dgs-asistan # Project id, must be unique amongst the projects
+  img_src: /assets/img/projects/dgs.webp # Optional image
+  description_less: > # Description shown at all times
+    <p>It is an Android app for the students who study the exam.</p> 
+  description_more: > # Description shown only when the project card is expanded
+    <p>The app is programmed in Java/Android Studio (Native), and was made for the students who study the exam. The students can calculate their scoroes, save the results of test, study math and Turkish, chat the other students, find new friends, and get notify about the exam etc. I've used Firebase, and my jSON API for registering, chatting, notifications.</p> 
+
+    <a href="https://play.google.com/store/apps/details?id=tr.com.emrecoban.dgsasistani" target="_blank" class="btn btn-dark mb-1"><i class="fas fa-link"></i> &nbsp View Project</a>
+    <a href="https://emrecoban.com.tr/dikey-gecis-asistani/" target="_blank" class="btn btn-dark mb-1"><i class="fas fa-align-right"></i> &nbsp Blog Post</a>
+
+  tags: [android, education, java] # A list of tags
+
 - name: Values Education # Project name, also used as heading
   id: values-education # Project id, must be unique amongst the projects
   img_src: /assets/img/projects/values-education.png # Optional image
