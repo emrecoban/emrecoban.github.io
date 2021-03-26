@@ -50,7 +50,7 @@
   tags: [cms, education, classic-asp] # A list of tags
 
 - name: 3Words # Project name, also used as heading
-  id: 3words # Project id, must be unique amongst the projects
+  id: three-words # Project id, must be unique amongst the projects
   img_src: /assets/img/projects/3words.png # Optional image
   description_less: > # Description shown at all times
     <p>3Words is a social network project, programmed in both Classic ASP and PHP.</p> 
@@ -58,6 +58,7 @@
     <p>The first release was published in 2012. The users can write 3 words about themself on their profiles each other in 3Words. The PHP version is better than the ASP version. It is not responsive unfortunately.</p> 
 
     <a href="https://3kelime.emrecoban.com.tr" target="_blank" class="btn btn-dark mb-1"><i class="fas fa-link"></i> &nbsp View Project</a>
+
     <a href="https://github.com/emrecoban/3Words" target="_blank" class="btn btn-dark mb-1"><i class="fas fa-code-branch"></i> &nbsp Repository</a>
 
   tags: [social-network, classic-asp, php] # A list of tags
