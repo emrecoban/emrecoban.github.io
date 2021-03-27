@@ -24,6 +24,18 @@
 
   tags: [theme, bootstrap, responsive] # A list of tags
 
+- name: My Voice # Project name, also used as heading
+  id: my-voice # Project id, must be unique amongst the projects
+  img_src: /assets/img/projects/my-voice.png # Optional image
+  description_less: > # Description shown at all times
+    <p>It is an Android app helps disabled people.</p> 
+  description_more: > # Description shown only when the project card is expanded
+    <p>The project's aim is to help disabled people to able to communicate more easily with people who do not know sign language. Disabled people can play the ready sentences in the screen.</p> 
+
+    <a href="https://github.com/emrecoban/my-voice" target="_blank" class="btn btn-dark mb-1"><i class="fas fa-code-branch"></i> &nbsp Repository</a>
+
+  tags: [android, disabled-people, java] # A list of tags
+
 - name: Dikey Geçiş Asistanı # Project name, also used as heading
   id: dgs-asistan # Project id, must be unique amongst the projects
   img_src: /assets/img/projects/dgs.webp # Optional image
