@@ -12,7 +12,7 @@ sitemap:
 
 <h4>Who I am </h4>
 <p class="text-justify mw-0">My name is Emre. I am currently a MSc. student in the Department of Computer Education and Instructional Technology at Amasya University, Turkey 🏫. My master thesis is focused on computational thinking 🔭. During the thesis term I try to develop the web app, which is a reliable and valid to measure high school students' computational thinking skills 🔬. Also I make scientific studies on computer science education 🔍.</p>
-<p class="text-justify mw-0">I graduated from industrial vocational high school, where I studied in the branch of web programming 🎓. While I was in high school, I worked as a web developer intern. Although I started developing websites in 2007, I got my first job in 2012 💼. In the past, I have worked on websites, android apps, and web based internal systems for some of the small software companies and clients 🖥️. My main experience is in back and front ends development with using the operations of CRUD 🔑. Also I can make this happen for your business as well, don’t hesitate to get in touch 📭.</p>
+<p class="text-justify mw-0">I graduated from industrial vocational high school, where I studied in the branch of web programming 🎓. While I was in high school, I worked as a web developer intern. Although I started developing websites in 2006, I got my first job in 2012 💼. In the past, I have worked on websites, android apps, and web based internal systems for some of the small software companies and clients 🖥️. My main experience is in back and front ends development with using the operations of CRUD 🔑. Also I can make this happen for your business as well, don’t hesitate to get in touch 📭.</p>
 <p class="text-justify mw-0">I live in Samsun, Turkey 🌿 and enjoy spending my free time reading scientific book & article and novel 📚, hanging out with friends as an asocial 🥂, learning new things about software development ✍️, watching TV series in English as my second language 📺, listening to loud music 🎶, and  surfing on the internet 🌐.</p>
 * 🏃 I'm currently working on PHP, MySQL, Bootstrap.
 * ✨ I'm currently learning Flutter, Dart.
@@ -55,7 +55,7 @@ sitemap:
 
 <h6><i class="fa fa-building"></i> <b>@localhost</b></h6>
 <h6 class="mb-2 p-0"><i class="fa fa-id-card" aria-hidden="true"></i> <b>freelance software developer</b></h6>
-<h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> 2007 – Present &middot; Everywhere</h6>
+<h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> 2006 – Present &middot; Everywhere</h6>
 <p class="text-justify lh-0 mw-0">Anything can happen at any moment.</p>
 ****
 <h4>Education</h4>
