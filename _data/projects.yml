@@ -36,6 +36,16 @@
 
   tags: [android, disabled-people, java] # A list of tags
 
+- name: ARM Car Washing  # Project name, also used as heading
+  id: arm-wax # Project id, must be unique amongst the projects
+  img_src: /assets/img/projects/arm-wax.jpg # Optional image
+  description_less: > # Description shown at all times
+    <p>It is a website, programmed in PHP, designed in Fireworks.</p> 
+  description_more: > # Description shown only when the project card is expanded
+    <p>The website is developed for the local car washing service. Firstly I designed a web design, and then converted the design in the format of PNG to HTML/CSS so as to code in PHP. Also it is not responsive unfortunately.</p> 
+
+  tags: [theme, web-design] # A list of tags
+
 - name: Dikey Geçiş Asistanı # Project name, also used as heading
   id: dgs-asistan # Project id, must be unique amongst the projects
   img_src: /assets/img/projects/dgs.webp # Optional image
