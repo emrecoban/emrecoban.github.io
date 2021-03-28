@@ -44,7 +44,7 @@
   description_more: > # Description shown only when the project card is expanded
     <p>The website is developed for the local car washing service. Firstly I designed a web design, and then converted the design in the format of PNG to HTML/CSS so as to code in PHP. Also it is not responsive unfortunately.</p> 
 
-  tags: [theme, web-design] # A list of tags
+  tags: [theme, web-design, php] # A list of tags
 
 - name: Dikey Geçiş Asistanı # Project name, also used as heading
   id: dgs-asistan # Project id, must be unique amongst the projects
@@ -59,6 +59,18 @@
 
   tags: [android, education, java] # A list of tags
 
+- name: Samsun Mobil Tesisat  # Project name, also used as heading
+  id: smt # Project id, must be unique amongst the projects
+  img_src: /assets/img/projects/smt.png # Optional image
+  description_less: > # Description shown at all times
+    <p>It is a website, programmed in PHP.</p> 
+  description_more: > # Description shown only when the project card is expanded
+    <p>I developed the website in PHP for the local technical company. It is not responsive, and there is no database. I did SEO works in this website.This website is showed in the first page in Google ("samsun tesisat").</p> 
+
+    <a href="https://www.samsunmobiltesisat.com" target="_blank" class="btn btn-dark mb-1"><i class="fas fa-link"></i> &nbsp View Project</a>
+
+  tags: [theme, web-design, php] # A list of tags
+
 - name: Values Education # Project name, also used as heading
   id: values-education # Project id, must be unique amongst the projects
   img_src: /assets/img/projects/values-education.png # Optional image
@@ -70,6 +82,26 @@
     <a href="https://github.com/emrecoban/values-education" target="_blank" class="btn btn-dark mb-1"><i class="fas fa-code-branch"></i> &nbsp Repository</a>
 
   tags: [cms, education, classic-asp] # A list of tags
+
+- name: Community College  # Project name, also used as heading
+  id: myo # Project id, must be unique amongst the projects
+  img_src: /assets/img/projects/myo.jpg # Optional image
+  description_less: > # Description shown at all times
+    <p>It is a web design for the community college.</p> 
+  description_more: > # Description shown only when the project card is expanded
+    <p>I designed a website design in Adobe Fireworks for my community college.</p> 
+
+  tags: [theme, web-design] # A list of tags
+
+- name: Arpan Group  # Project name, also used as heading
+  id: arpan # Project id, must be unique amongst the projects
+  img_src: /assets/img/projects/arpan.png # Optional image
+  description_less: > # Description shown at all times
+    <p>It is a web design and logo.</p> 
+  description_more: > # Description shown only when the project card is expanded
+    <p>I designed a website design and logo for the local company.</p> 
+
+  tags: [theme, web-design] # A list of tags
 
 - name: 3Words # Project name, also used as heading
   id: three-words # Project id, must be unique amongst the projects
@@ -84,3 +116,13 @@
     <a href="https://github.com/emrecoban/3Words" target="_blank" class="btn btn-dark mb-1"><i class="fas fa-code-branch"></i> &nbsp Repository</a>
 
   tags: [social-network, classic-asp, php] # A list of tags
+
+- name: Mobile Web Kontrol  # Project name, also used as heading
+  id: mobil-kontrol # Project id, must be unique amongst the projects
+  img_src: /assets/img/projects/mobil-kontrol.jpg # Optional image
+  description_less: > # Description shown at all times
+    <p>It is both web and desktop app for managing PC via SMS.</p> 
+  description_more: > # Description shown only when the project card is expanded
+    <p>Users can send SMS to their PC via Mobil Web Kontrol. The project was developed in both Classic ASP and Visual Basic. The screenshot is from web interface. In the screen, users also can send command on the internet. The program in the computer will take the commands, and show the result such as alert a message.</p> 
+
+  tags: [classic-asp, visual-basic] # A list of tags
