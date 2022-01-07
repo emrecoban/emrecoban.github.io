@@ -64,7 +64,7 @@ sitemap:
 <h6 class="mb-2 p-0"><i class="fa fa-level-up" aria-hidden="true"></i> <b>Master of Science</b></h6>
 <h6 class="mb-2 p-0 text-info"><i class="fa fa-paperclip" aria-hidden="true"></i> <b>Web App to Measure <abbr title="Computational Thinking">CT</abbr> Skills</b></h6>
 <h6 class="mb-2 p-0 text-success"><i class="fa fa-user" aria-hidden="true"></i> <em>Advisor: Prof. Dr. Özgen KORKMAZ</em></h6>
-<h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> 2018 – Present &middot; Amasya, Turkey</h6>
+<h6 class="mb-2 p-0 font-weight-normal"><i class="fa fa-info-circle"></i> 2018 – 2021 &middot; Amasya, Turkey</h6>
 <p class="text-left lh-0 mw-0 mb-0">:books: Lessons learned:</p>
 * Scientific Methods
 * IBM SPSS
