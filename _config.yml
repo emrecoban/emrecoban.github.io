@@ -1,6 +1,6 @@
 title: Emre COBAN # Shown in header on pages with full_logo: true
 short_logo: Emre # Shown in header on all pages by default unless full_logo: true is set
-description: MSc. Student in CEIT. # The description for your site
+description: Developer. # The description for your site
 url: "https://emrecoban.github.io" # Site base URL
 
 author:
