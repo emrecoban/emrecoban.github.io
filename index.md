@@ -17,6 +17,8 @@ sitemap:
 * 🏃 I'm currently working on PHP, MySQL, Bootstrap.
 * ✨ I'm currently learning Flutter, Dart.
 * 💬 Ask me about Android Development, PHP, Bootstrap.
+* 📄 Look at my updated CV: <a href="https://github.com/emrecoban/emrecoban.github.io/blob/main/Emre_COBAN_CV-ENG.pdf">CV (PDF Vers.)</a>
+
 <h4>Last posts</h4>
 <ul>
 {% for post in site.posts limit:10 %}   
