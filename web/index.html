@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Blog</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .blog-preview {
+            transition: transform 0.3s;
+        }
+        .blog-preview:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Mini Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog-post.html">Son Yazı</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Hakkımızda</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-light p-5 rounded mb-4">
+        <div class="container">
+            <h1 class="display-4">Mini Blog Sayfamıza Hoş Geldiniz</h1>
+            <p class="lead">Güncel yazılarımızı ve düşüncelerimizi paylaştığımız blog sayfamızda keyifli okumalar.</p>
+            <a href="blog-post.html" class="btn btn-primary btn-lg">Son Yazıyı Oku</a>
+        </div>
+    </div>
+
+    <!-- Blog Posts List -->
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="mb-4 border-bottom pb-2">Son Yazılar</h2>
+                
+                <!-- Blog Post 1 -->
+                <div class="card mb-4 shadow-sm blog-preview">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="https://picsum.photos/id/1015/300/200" class="img-fluid rounded-start" alt="Blog görseli">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Doğanın Güzellikleri</h3>
+                                <p class="card-text">Doğanın muhteşem güzelliklerini keşfetmek için çıktığımız yolculukta karşılaştığımız manzaralar...</p>
+                                <p class="card-text"><small class="text-muted">23 Mayıs 2025 · Ahmet Yılmaz</small></p>
+                                <a href="blog-post.html" class="btn btn-sm btn-outline-primary">Devamını Oku</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="card mb-4 shadow-sm blog-preview">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="https://picsum.photos/id/1019/300/200" class="img-fluid rounded-start" alt="Blog görseli">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Şehir Yaşamının İncelikleri</h3>
+                                <p class="card-text">Modern şehir yaşamında karşılaştığımız zorluklar ve bunlarla başa çıkma yöntemleri...</p>
+                                <p class="card-text"><small class="text-muted">18 Mayıs 2025 · Zeynep Kaya</small></p>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Devamını Oku</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="card mb-4 shadow-sm blog-preview">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="https://picsum.photos/id/1025/300/200" class="img-fluid rounded-start" alt="Blog görseli">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Dostlarımız: Evcil Hayvanlar</h3>
+                                <p class="card-text">Evcil hayvanların hayatımıza kattığı değer ve onlarla yaşamanın püf noktaları...</p>
+                                <p class="card-text"><small class="text-muted">10 Mayıs 2025 · Mehmet Demir</small></p>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Devamını Oku</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="my-0">Kategoriler</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                Doğa
+                                <span class="badge bg-primary rounded-pill">4</span>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                Şehir Yaşamı
+                                <span class="badge bg-primary rounded-pill">2</span>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                Hayvanlar
+                                <span class="badge bg-primary rounded-pill">3</span>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                Teknoloji
+                                <span class="badge bg-primary rounded-pill">5</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="my-0">Abone Ol</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Yeni yazılardan haberdar olmak için abone olun.</p>
+                        <form>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="E-posta adresiniz">
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Abone Ol</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Mini Blog</h5>
+                    <p>Düşüncelerimizi ve deneyimlerimizi paylaştığımız blog sayfası.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>İletişim</h5>
+                    <p>info@miniblog.com</p>
+                    <p>© 2025 Mini Blog. Tüm hakları saklıdır.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
