@@ -1,0 +1,489 @@
+%-------------------------
+% Resume in Latex
+% Author : Aras Gungore
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome}
+\input{glyphtounicode}
+
+
+%---------- FONT OPTIONS ----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeEducationHeading}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeOrganizationHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+      \textit{\small#3}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%---------- HEADING ----------
+
+\begin{center}
+    \textbf{\Huge \scshape Emre Çoban} \\ \vspace{3pt}
+    \large PhD Student, Lecturer, Developer \\ \vspace{2pt}
+    \small \href{mailto:emre@emrecoban.com.tr}{emre@emrecoban.com.tr}
+    \\ \vspace{15pt}
+    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/emreshepherd}{LinkedIn}
+    $|$
+    \faGithub \hspace{.5pt} \href{https://github.com/emrecoban}{GitHub}
+    $|$
+    \faGraduationCap \hspace{.5pt} \href{https://scholar.google.com/citations?user=1-IxtfIAAAAJ&hl=en}{Scholar}
+    $|$
+    \faGlobe \hspace{.5pt} \href{https://emre.run}{Portfolio}
+    $|$
+    \faMapMarker \hspace{.5pt} Turkey \& Spain
+    \\ \vspace{5pt}
+\end{center}
+
+
+
+%----------- EDUCATION -----------
+
+\section{Education}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+    
+    \resumeEducationHeading
+      {Rey Juan Carlos University}{Madrid, Spain}
+      {Ph.D. in Information and Communication Technologies   \textbf{GPA: --}}{Oct 2024 \textbf{--} Sep 2028}{Supervised by: Associate Professor Raquel Belén Hijón Neira, PhD}{}
+      \vspace{-7pt}
+      \resumeSubHeadingListStart
+            \small{\item{
+                \textbf{Working-on:} AI-Driven Feedback Methodologies to Enhance Programming Education \\
+            }}
+        \resumeSubHeadingListEnd
+      \vspace{-3pt}
+    \resumeEducationHeading
+      {Amasya University}{Amasya, Turkey}
+      {M.Sc. in Computer Education and Instructional Technologies   \textbf{GPA: 3.66/4.00}}{2018 \textbf{--} 2021}{Supervised by: Professor Özgen Korkmaz, PhD}{}
+      \vspace{-7pt}
+      \resumeSubHeadingListStart
+            \small{\item{
+                \textbf{Master’s Thesis:} An Alternative Approach for Measuring Computational Thinking: A Performance-Based Platform \\
+            }}
+        \resumeSubHeadingListEnd
+      \vspace{-3pt}
+      \resumeEducationHeading
+      {Ondokuz Mayıs University}{Samsun, Turkey}
+      {B.Sc. in Computer Education and Instructional Technologies   \textbf{GPA: 3.43/4.00}}{2016 \textbf{--} 2018}{Supervised by: Assistant Professor Polat Şendurur, PhD}{}
+      \vspace{-7pt}
+      \resumeSubHeadingListStart
+            \small{\item{
+                \textbf{Undergraduate Project:} Developed an Android application designed to support accessibility and daily usage needs for individuals with disabilities \\
+            }}
+        \resumeSubHeadingListEnd
+      \vspace{-3pt}
+      \resumeEducationHeading
+      {Ondokuz Mayıs University}{Samsun, Turkey}
+      {A.Sc. in Computer Programming   \textbf{GPA: 3.46/4.00}}{2013 \textbf{--} 2015}{Supervised by: Lecturer Kemal Özcan}{}
+      \vspace{-7pt}
+      \resumeSubHeadingListStart
+            \small{\item{
+                \textbf{Associate Degree Project:} Developed a Content Management System (CMS) to support instructional content delivery and management for values education \\
+            }}
+        \resumeSubHeadingListEnd
+      \vspace{6pt}
+  \resumeSubHeadingListEnd
+
+
+
+
+
+%----------- EXPERIENCE -----------
+
+\section{Experience}
+  \vspace{7pt}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Ardahan University}{Ardahan, Turkey}
+      {Lecturer in Computer Technologies, Vocational School of Technical Sciences}{Mar 2024 \textbf{--} Present, Full-time}
+        \resumeItemListStart
+            \resumeItem{Delivered associate degree–level instruction across multiple computing disciplines, including Mobile Programming, Server Operating Systems, Fundamentals of Programming, Object-Oriented Programming, and Open-Source Operating Systems, emphasizing applied software development, system-level competencies, and hands-on laboratory practice.}
+        \resumeItemListEnd
+
+
+    \resumeSubheading
+      {Gendarmerie and Coast Guard Academy}{Ankara, Turkey}
+      {Reserve Officer in Directorate of Security Research Center}{Dec 2021 \textbf{--} Oct 2022, Full-time}
+        \resumeItemListStart
+            \resumeItem{Completed mandatory military service (national conscription requirement in Türkiye).}
+            \resumeItem{Conducted research on Virtual Reality (VR), Augmented Reality (AR), and Mixed Reality (MR) technologies to enhance training and simulation programs.}
+            \resumeItem{Reviewed and edited academic manuscripts to ensure clarity, coherence, and adherence to scholarly writing standards.}
+            \resumeItem{Provided technical ideation and advisory support to development teams on emerging technology projects.}
+        \resumeItemListEnd
+
+
+ 
+    \resumeSubheading
+      {Samsun Vocational and Technical Anatolian High School}{Samsun, Turkey}
+      {IT Teacher}{Sep 2017 \textbf{--} May 2018, Internship}
+        \resumeItemListStart
+            \resumeItem{Delivered hands-on Arduino instruction to high school students, covering fundamental electronics, microcontroller programming, and sensor integration.}
+            \resumeItem{Evaluated student projects and provided constructive technical feedback to support iterative design and problem-solving skills.}
+        \resumeItemListEnd
+
+
+    \resumeSubheading
+      {Side Internet and IT}{Samsun, Turkey}
+      {Web Developer}{Jun 2014 \textbf{--} Aug 2014}
+        \resumeItemListStart
+            \resumeItem{Translated PSD and PNG design assets into responsive HTML/CSS interfaces and implemented backend functionality using Classic ASP, ensuring cross-browser compatibility and layout fidelity.}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Kayrasoft Software and IT}{Samsun, Turkey}
+      {Web Developer}{Jul 2013 \textbf{--} Apr 2014}
+        \resumeItemListStart
+            \resumeItem{Converted PSD and PNG design assets into responsive, standards-compliant HTML/CSS web interfaces.}
+            \resumeItem{Developed corporate websites using Classic ASP, integrating dynamic functionality with JavaScript and jQuery.}
+            \resumeItem{Performed database design and operations using MySQL and Microsoft Access, including data modeling and query optimization.}
+            \resumeItem{Built user-friendly web platforms featuring intuitive interfaces and CRUD-based content management structures to effectively represent corporate brand identity.}
+        \resumeItemListEnd
+
+
+        \resumeSubheading
+      {KA Information Technologies}{Samsun, Turkey}
+      {Web Developer}{Jun 2012 \textbf{--} Nov 2012}
+        \resumeItemListStart
+            \resumeItem{Developed responsive web interfaces using HTML/CSS by translating PSD and PNG design assets into production-ready front-end implementations.}
+            \resumeItem{Implemented CRUD-based data management functionalities to enhance website interactivity and streamline content update workflows.}
+            \resumeItem{Contributed to government-funded software projects focused on building tracking systems and women’s health information management in Türkiye.}
+        \resumeItemListEnd
+
+
+    
+  \resumeSubHeadingListEnd
+
+
+
+
+%----------- PUBLICATIONS -----------
+
+\section{Publications}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+      \textbf{1.} \textbf{[Conference Paper]} \textbf{Çoban, E., \& Hijón-Neira, R.} ``AI-Code Feedback, an AI-Based Companion for Enhancing Introductory Programming Education.'' \emph{2026 IEEE Global Engineering Education Conference (EDUCON)}, Unpublished. \\
+
+      \textbf{2.} \textbf{[Journal Article]} \textbf{Çoban, E., Çakır, R., \& Korkmaz, Ö.} ``AI Feedback's Impact on Programming Achievement, Motivation, and Attitude.'' Unpublished. \\
+
+      \textbf{3.} \textbf{[Journal Article]} \textbf{Çoban, E., Korkmaz, Ö., \& Çakır, R.} ``Attitudes towards IT Ethics, Personalized Learning, and AI Literacy among University Students.'' Unpublished. \\
+
+      \textbf{4.} \textbf{[Book]} \textbf{Korkmaz, Ö., \& Çoban, E.} ``Integration of artificial intelligence into education and life on the axis of sustainability.'' In \emph{Optimum Science Conference} (1st ed.). Hason Publishing, 2024. \\
+
+      \textbf{5.} \textbf{[Journal Article]} \textbf{Hijón-Neira, R., Pizarro, C., French, J., Palacios-Alonso, D., \& Çoban, E.} ``Computational Thinking Measurement of CS University Students.'' \emph{Applied Sciences}, 2024. \\
+
+      \textbf{6.} \textbf{[Book]} \textbf{Sevinç, S., \& Çoban, E.} ``Gendarmerie and Disaster Management in 30 Questions.'' \emph{Jandarma ve Sahil Güvenlik Akademisi Yayınları}, 2023. \\
+
+      \textbf{7.} \textbf{[Book Chapter]} \textbf{Erdal, H., Arslan, Ş., \& Çoban, E.} ``Extended Reality Technologies: Conceptual Framework and Use in Security.'' In \emph{Extended Reality Technologies and Security Applications}. Kriter Yayınevi, 2022. \\
+
+      \textbf{8.} \textbf{[Conference Paper]} \textbf{Çoban, E., \& Korkmaz, Ö.} ``An Alternative Approach for Measuring Computational Thinking Skills: Performance-Based Assessment.'' \emph{ERPA International Congresses on Education}, 2021. \\
+
+      \textbf{9.} \textbf{[Journal Article]} \textbf{Çoban, E., \& Korkmaz, Ö.} ``An Alternative Approach for Measuring Computational Thinking: Performance-Based Platform.'' \emph{Thinking Skills and Creativity}, 2021. \\
+
+      \textbf{10.} \textbf{[Journal Article]} \textbf{Erdoğmuş, C., Çoban, E., Korkmaz, Ö., \& Özden, M. Y.} ``Technological Formation Scale for Teachers (TFS): Development and Validation.'' \emph{Participatory Educational Research}, 2020. \\
+
+      \textbf{11.} \textbf{[Journal Article]} \textbf{Çoban, E., Korkmaz, Ö., Çakır, R., et al.} ``Attitudes of IT Teacher Candidates Towards Computer Programming, Self-Efficacy, and Opinions on Block-Based Programming.'' \emph{Education and Information Technologies}, 2020. \\
+
+      \textbf{12.} \textbf{[Conference Paper]} \textbf{Erdoğmuş, C., Çoban, E., \& Korkmaz, Ö.} ``Technological Formation Levels of Teachers and Teacher Candidates.'' \emph{Ondokuz Mayıs University International 100th Year Education Symposium}, 2019.
+    }}
+  \resumeSubHeadingListEnd
+
+
+%----------- SKILLS -----------
+
+\section{Skills}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        
+        \textbf{Soft Skills:}{ Analytical problem-solving, collaborative teamwork, teaching \& mentoring} \\ \vspace{3pt}
+        
+        \textbf{Natural Languages:}{ Turkish (Native), English (B1)} \\ \vspace{3pt}
+        
+        \textbf{Languages:}{ Python, PHP, C/C++, JavaScript} \\ \vspace{3pt}
+
+        \textbf{Technologies:}{ MySQL, Node.js, Next.js, React, Supabase, Firebase} \\ \vspace{3pt}
+
+        \textbf{Methodologies:}{ OOP, CI/CD} \\ \vspace{3pt}
+        
+    }}
+  \resumeSubHeadingListEnd
+
+
+%----------- TEACHING -----------
+
+\section{Teaching}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{Object-oriented Programming (C++)} \hfill \textit{Associate Degree, 4 hours} \\ \vspace{3pt}
+        \textbf{The Fundamentals of Programming (Python, Pseudocode, Flowchart)} \hfill \textit{Associate Degree, 4 hours} \\ \vspace{3pt}
+        \textbf{Mobile Programming (Flutter, React Native)} \hfill \textit{Associate Degree, 3 hours} \\ \vspace{3pt}
+        \textbf{Server Operating Systems} \hfill \textit{Associate Degree, 2 hours} \\ \vspace{3pt}
+        \textbf{Open-source Operating Systems (Ubuntu, Linux Basic Commands)} \hfill \textit{Associate Degree, 2 hours} \\ \vspace{3pt}
+        \textbf{Web Project Management} \hfill \textit{Associate Degree, 2 hours} \\ \vspace{3pt}
+        \textbf{Information and Communication Technology} \hfill \textit{Associate Degree, 2 hours} \\ \vspace{3pt}
+        \textbf{System Analysis and Design} \hfill \textit{Associate Degree, 2 hours} \\ \vspace{3pt}
+        \textbf{Software Installing and Management} \hfill \textit{Associate Degree, 2 hours} \\ \vspace{3pt}   
+    }}
+  \resumeSubHeadingListEnd
+
+
+%----------- PROJECTS -----------
+
+\section{Selected Projects}
+    \vspace{3pt}
+    \resumeSubHeadingListStart
+
+
+      \resumeProjectHeading
+        {\textbf{Randevum (Appointment System, Web App)} $|$ \emph{\href{https://randevum.co}{\color{blue}Live}} $|$ \emph{\href{https://github.com/randevumco}{\color{blue}GitHub}}}{}
+          \resumeItemListStart
+            \resumeItem{An appointment scheduling platform that helps users book meetings quickly, optimize availability, and communicate with attendees clearly and securely (Next.js, Supabase).}
+          \resumeItemListEnd
+
+
+      \resumeProjectHeading
+        {\textbf{Computational Thinking Score (Web App)} $|$ \emph{\href{https://computationalthinkingscore.com}{\color{blue}Live}} $|$ \emph{\href{https://github.com/emrecoban/ComputationalThinking}{\color{blue}GitHub}}}{}
+          \resumeItemListStart
+            \resumeItem{A web application for assessing computational thinking skills (a key 21st-century competency), developed as part of an academic research study and aligned with my M.Sc.\ thesis on performance-based measurement under the supervision of Prof.\ Özgen Korkmaz, PhD. (PHP, MySQL).}
+          \resumeItemListEnd
+
+   
+   \resumeProjectHeading
+        {\textbf{My Voice (Android App)} $|$ \emph{\href{https://github.com/emrecoban/my-voice}{\color{blue}GitHub}}}{}
+          \resumeItemListStart
+            \resumeItem{An Android app designed to support communication for people with hearing impairments by playing pre-written sentences for listeners who do not know sign language; developed under the supervision of Asst.\ Prof.\ Polat Şendurur, PhD.\ (Java).}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{Values Education (CMS)} $|$ \emph{\href{https://github.com/emrecoban/values-education}{\color{blue}GitHub}}}{}
+          \resumeItemListStart
+            \resumeItem{A content management system for primary-school values education where teachers assign books and games, and students earn points by reading to unlock activities; developed under the supervision of Lecturer Kemal Özcan (Classic ASP, MS Access).}
+          \resumeItemListEnd
+            \resumeProjectHeading
+        {\textbf{e-Government Favorites (Chrome Extension)} $|$ \emph{\href{https://chrome.google.com/webstore/detail/e-devlet-favoriler/majkbfhcfdmnoaondmphcobeenmohike}{\color{blue}Chrome Web Store}} $|$ \emph{\href{https://github.com/emrecoban/e-devlet-fav}{\color{blue}GitHub}}}{}
+          \resumeItemListStart
+            \resumeItem{A Chrome extension for Türkiye’s e-Government portal (turkiye.gov.tr) that lets users pin frequently used services and access them directly from a favorites list, reducing search time and speeding up common workflows (JavaScript).}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{Turkish Dictionary (Web App)} $|$ \emph{\href{https://sozluk.emre.run/}{\color{blue}Live}} $|$ \emph{\href{https://github.com/emrecoban/turkish-dictionary}{\color{blue}GitHub}}}{}
+          \resumeItemListStart
+            \resumeItem{A digital dictionary platform that presents word meanings, linguistic properties, and usage examples, using publicly available data from sozluk.gov.tr (Next.js).}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{Vertical Transfer Assistant (Android App)} $|$ \emph{\href{https://github.com/emrecoban/dikey-gecis-asistani}{\color{blue}GitHub}}}{}
+          \resumeItemListStart
+            \resumeItem{A native Android app for students preparing for Türkiye’s Vertical Transfer Exam (DGS), designed as a lightweight study companion and test-prep assistant (Java).}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+%----------- AWARDS & ACHIEVEMENTS -----------
+
+\section{Awards \& Achievements}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{High Honors Degree:}{ Awarded to Master alumni who have graduated with a GPA greater than or equal to 3.50 by Amasya University. (2021)} \\ \vspace{3pt}
+        \textbf{Honors Degree:}{ Awarded to Associate alumni who have graduated with a GPA greater than or equal to 3.00 by Ondokuz Mayıs University. (2015)} \\ \vspace{3pt}
+    }}
+  \resumeSubHeadingListEnd
+
+
+%----------- PROFESSIONAL MEMBERSHIPS -----------
+
+\section{Professional Memberships}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{ACM} --- Student Member (\#1501909) \hfill \textit{2025 -- Present} \\ \vspace{3pt}
+
+        \textbf{IEEE (Spain Section)} --- Graduate Student Member (\#95257895) \hfill \textit{2025 -- Present} \\ \vspace{3pt}
+
+        \textbf{IEEE Education Society} --- Graduate Student Member \hfill \textit{2025 -- Present} \\ \vspace{3pt}
+
+        \textbf{IEEE Young Professionals} --- Graduate Student Member \hfill \textit{2025 -- Present} \\ \vspace{3pt}
+    }}
+  \resumeSubHeadingListEnd
+
+
+
+
+%----------- RELEVANT COURSEWORK -----------
+
+% \section{Relevant Coursework}
+  % \vspace{2pt}
+  % \resumeSubHeadingListStart
+    % \small{\item{
+        % \textbf{Major coursework:}{ Materials Science, Electrical Circuits I-II, Digital System Design, Numerical Methods, Probability Theory, Electronics I-II, Signals and Systems, Electromagnetic Field Theory, Energy Conversion, System Dynamics and Control, Communication Engineering, Pattern Recognition, Introduction to Digital Signal Processing, Introduction to Digital Communications, Introduction to Database Systems, Introduction to Image Processing, Machine Vision} \\ \vspace{3pt}
+        
+        % \textbf{Minor coursework:}{ Discrete Computational Structures, Introduction to Object-Oriented Programming, Data Structures and Algorithms, Computer Organization, Fundamentals of Software Engineering}
+    % }}
+  % \resumeSubHeadingListEnd
+
+
+
+%----------- CERTIFICATES -----------
+
+% \section{Certificates}
+  % \resumeSubHeadingListStart
+    
+    % \resumeOrganizationHeading
+      % {Procter \& Gamble VIA Certificate Program}{Feb 2022}{Project Management and Personal Productivity}
+    
+  % \resumeSubHeadingListEnd
+
+
+
+%----------- ORGANIZATIONS -----------
+
+% \section{Organizations}
+  % \resumeSubHeadingListStart
+    
+    % \resumeOrganizationHeading
+      % {Institute of Electrical and Electronics Engineers (IEEE)}{Feb 2022 -- Present}{Student Member}
+    
+  % \resumeSubHeadingListEnd
+
+
+
+%----------- HOBBIES -----------
+
+% \section{Hobbies}
+  % \resumeSubHeadingListStart
+    % \small{\item{Basketball, Swimming, Fitness, Eight-ball, Horology}}
+  % \resumeSubHeadingListEnd
+
+
+
+%----------- REFERENCES -----------
+
+% \section{References}
+  % \vspace{2pt}
+  % \resumeSubHeadingListStart
+    % \item{References available upon request.}
+  % \resumeSubHeadingListEnd
+
+
+
+%-------------------------------------------
+\end{document}
