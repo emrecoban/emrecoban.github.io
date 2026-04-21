@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Feedback Teleprompter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #f2ede4;
+            color: #1c1814;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: #1c1814;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        .top-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .teleprompter-badge {
+            background: #e8a030;
+            color: #1c1814;
+            font-size: 10px;
+            font-family: monospace;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 3px;
+            letter-spacing: 1.5px;
+        }
+
+        .slide-counter {
+            color: #e8a030;
+            font-size: 18px;
+            font-family: monospace;
+            font-weight: 800;
+        }
+
+        .slide-counter .total {
+            color: #665a4a;
+            font-size: 13px;
+        }
+
+        .top-buttons {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .top-btn {
+            background: transparent;
+            border: 1px solid #3a3028;
+            color: #a08060;
+            font-size: 12px;
+            font-family: monospace;
+            padding: 4px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .top-btn:hover {
+            border-color: #e8a030;
+            color: #e8a030;
+        }
+
+        .top-btn.active {
+            background: #e8a030;
+            color: #1c1814;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            height: 4px;
+            background: #d8d0c4;
+            flex-shrink: 0;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 5.26%; /* 100/19 ≈ 5.26% */
+            background: #e8a030;
+            transition: width 0.3s ease;
+        }
+
+        /* Slide Header */
+        .slide-header {
+            background: #e8a030;
+            padding: 8px 20px 7px;
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .slide-number {
+            font-size: 30px;
+            font-weight: 800;
+            font-family: monospace;
+            color: #1c1814;
+            line-height: 1;
+        }
+
+        .slide-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1c1814;
+        }
+
+        .slide-time {
+            margin-left: auto;
+            font-size: 12px;
+            font-family: monospace;
+            color: #5a3a10;
+            font-weight: 700;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 16px 18px 10px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* TR Reminder */
+        .tr-reminder {
+            background: #e6dfd2;
+            border: 1px solid #c8bfb0;
+            border-radius: 8px;
+            padding: 10px 14px;
+            margin-bottom: 14px;
+            color: #5a4a38;
+            line-height: 1.55;
+            flex-shrink: 0;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .tr-label {
+            color: #b07820;
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            font-family: monospace;
+            font-weight: 700;
+        }
+
+        /* Script Content */
+        .script-content {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 12px;
+            line-height: 1.9;
+            color: #1c1814;
+            font-size: 1rem;
+        }
+
+        /* Pronunciation Section */
+        .pronunciation-section {
+            flex-shrink: 0;
+        }
+
+        .pronunciation-toggle {
+            background: transparent;
+            border: 1px solid #c0b8a8;
+            color: #7a6a58;
+            font-size: 11px;
+            font-family: monospace;
+            letter-spacing: 1px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .pronunciation-toggle:hover {
+            background: #d8d0c4;
+        }
+
+        .pronunciation-toggle.active {
+            background: #d8d0c4;
+        }
+
+        .pronunciation-list {
+            background: #e8e0d4;
+            border: 1px solid #c8bfb0;
+            border-radius: 8px;
+            padding: 10px 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            animation: slideDown 0.3s ease;
+        }
+
+        .pronunciation-item {
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+        }
+
+        .pronunciation-word {
+            color: #1c1814;
+            font-weight: 700;
+            min-width: 160px;
+        }
+
+        .pronunciation-phonetic {
+            color: #b07820;
+            font-family: monospace;
+            font-weight: 700;
+        }
+
+        /* Navigation */
+        .navigation {
+            background: #e0d8cc;
+            border-top: 1px solid #c8bfb0;
+            padding: 10px 16px;
+            display: flex;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .nav-btn {
+            flex: 1;
+            background: #d0c8bc;
+            border: 1px solid #b8b0a0;
+            color: #3a2c1e;
+            font-size: 13px;
+            font-family: monospace;
+            letter-spacing: 1px;
+            padding: 11px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.2s ease;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            background: #c8bfb0;
+            transform: translateY(-1px);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .nav-btn-primary {
+            flex: 2;
+            background: #1c1814;
+            color: #f2ede4;
+            border-color: #1c1814;
+        }
+
+        .nav-btn-primary:hover:not(:disabled) {
+            background: #2c2824;
+        }
+
+        .nav-btn-primary:disabled {
+            background: #c8bfb0;
+            color: #8a7a6a;
+            opacity: 0.5;
+        }
+
+        .nav-btn-reset {
+            min-width: 52px;
+            flex: none;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; max-height: 0; }
+            to { opacity: 1; max-height: 500px; }
+        }
+
+        /* Scrollbar Styling */
+        .script-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .script-content::-webkit-scrollbar-track {
+            background: #e8e0d4;
+            border-radius: 3px;
+        }
+
+        .script-content::-webkit-scrollbar-thumb {
+            background: #c8bfb0;
+            border-radius: 3px;
+        }
+
+        .script-content::-webkit-scrollbar-thumb:hover {
+            background: #b8b0a0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .slide-header {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            
+            .slide-time {
+                margin-left: 0;
+                width: 100%;
+                text-align: right;
+            }
+            
+            .top-bar {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <span class="teleprompter-badge">TELEPROMPTER</span>
+            <span class="slide-counter">
+                <span id="currentSlideNum">1</span><span class="total"> / 19</span>
+            </span>
+        </div>
+        <div class="top-buttons">
+            <button class="top-btn" id="fontDecreaseBtn">A–</button>
+            <button class="top-btn" id="fontIncreaseBtn">A+</button>
+            <button class="top-btn" id="toggleTRBtn">TR</button>
+        </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Slide Header -->
+    <div class="slide-header">
+        <span class="slide-number" id="displaySlideNumber">1</span>
+        <span class="slide-title" id="displaySlideTitle">Title</span>
+        <span class="slide-time" id="displaySlideTime">~30 sn</span>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- TR Reminder -->
+        <div class="tr-reminder" id="trReminder" style="display: none;">
+            <span class="tr-label">TÜRKÇE ▸ </span>
+            <span id="trText"></span>
+        </div>
+
+        <!-- English Script -->
+        <div class="script-content" id="scriptContent">
+            Hello everyone. My name is Emre Çoban...
+        </div>
+
+        <!-- Pronunciation Section -->
+        <div class="pronunciation-section" id="pronunciationSection">
+            <button class="pronunciation-toggle" id="pronunciationToggle">▼ ZOR KELİMELER</button>
+            <div class="pronunciation-list" id="pronunciationList" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-btn" id="prevBtn">← GERİ</button>
+        <button class="nav-btn nav-btn-primary" id="nextBtn">İLERİ →</button>
+        <button class="nav-btn nav-btn-reset" id="resetBtn">↺</button>
+    </div>
+
+    <script>
+        // Slide Data
+        const slides = [
+            {
+                id: 1,
+                title: "Title",
+                time: "~30 sn",
+                tr: "Kendinizi tanıtın. Başlığı söyleyin ve co-author'ı belirtin.",
+                script: "Hello everyone. My name is Emre Çoban. I am a PhD student at Rey Juan Carlos University in Spain, and I am also a lecturer at Ardahan University in Türkiye. Today, I will present our study: AI Code Feedback for Introductory Programming Education. This study was done together with my co-author, Raquel Belén Hijón Neira.",
+                hard: [
+                    ["introductory", "in-trı-DAK-tı-ri"],
+                    ["conducted", "kın-DAK-tid"],
+                ]
+            },
+            {
+                id: 2,
+                title: "Agenda",
+                time: "~20 sn",
+                tr: "Sunumun sırasını çok kısa özetle.",
+                script: "First, I will explain the background and the problem. Then, I will talk about related studies and the Technology Acceptance Model. After that, I will show our tool, explain the method, and share the results and conclusions.",
+                hard: [
+                    ["methodology", "me-tı-DOL-ı-ci"],
+                ]
+            },
+            {
+                id: 3,
+                title: "Background & Context",
+                time: "~30 sn",
+                tr: "Öğrenciler zorlanıyor → anında geri bildirim lazım → yapay zeka fırsat sunuyor.",
+                script: "Python is one of the most popular languages for learning programming. But beginners often struggle with syntax and debugging. They need regular and instant support. In large classes, teachers cannot help every student all the time. This is where AI creates a new opportunity — it can give instant and personal feedback.",
+                hard: [
+                    ["generative", "CEN-ı-rı-tiv"],
+                    ["personalized", "PÖR-sı-nıl-ayzd"],
+                ]
+            },
+            {
+                id: 4,
+                title: "Context Switching",
+                time: "~30 sn",
+                tr: "Öğrenci VS Code'dan tarayıcıya gidiyor → dikkat bozuluyor → biz bunu VS Code içine taşıdık.",
+                script: "This slide shows the main problem. Many students leave VS Code, open a browser, ask AI in a chat window, and then return to their code. This breaks their attention and interrupts the learning process. Our idea is simple: bring the feedback directly into the coding environment.",
+                hard: [
+                    ["interrupts", "in-tı-RAPTS"],
+                    ["environment", "en-VAY-rın-mınt"],
+                ]
+            },
+            {
+                id: 5,
+                title: "Problem & Research Questions",
+                time: "~35 sn",
+                tr: "Problem: akışı kesmeden geri bildirim. Sorular: başarı, kavram, cinsiyet, kabul.",
+                script: "Our main problem is: how can we give AI feedback inside the coding environment without breaking the learner's workflow? Based on this, we asked — does the AI extension improve Python learning more than standard VS Code? Do the gains change across concepts? Are there gender differences? And how do students accept the technology?",
+                hard: [
+                    ["whether", "WEDH-ır"],
+                    ["acceptance", "ık-SEP-tıns"],
+                ]
+            },
+            {
+                id: 6,
+                title: "AI in General Fields",
+                time: "~25 sn",
+                tr: "Yapay zeka birçok alanda kullanılıyor. Ama gizlilik ve güven gibi kaygılar da var.",
+                script: "AI helpers are already used in many fields — healthcare, education, business, and social care. They support people with guidance and daily tasks. But important concerns also remain: privacy, trust, security, and data governance.",
+                hard: [
+                    ["governance", "GAV-ır-nıns"],
+                    ["motivation", "moh-tı-VEY-şın"],
+                ]
+            },
+            {
+                id: 7,
+                title: "AI in Programming Education",
+                time: "~30 sn",
+                tr: "Yapay zeka hata tespiti ve kişisel destek sunabilir. Ama IDE dışında çalışıyor — bu boşluğu biz hedefledik.",
+                script: "In programming education, AI tools can explain code, detect errors, and give personal support for novice learners. They can help students understand difficult concepts. However, many of these tools still work outside the IDE. This is the gap we wanted to address with our study.",
+                hard: [
+                    ["novice", "NOV-is"],
+                    ["address", "ı-DRES"],
+                ]
+            },
+            {
+                id: 8,
+                title: "Technology Acceptance Model (TAM)",
+                time: "~25 sn",
+                tr: "TAM'ı çok teorik anlatma. Öğrencilerin teknolojiyi nasıl kabul ettiğini anlamak için kullandık.",
+                script: "We also used the Technology Acceptance Model — or TAM. This model helps us understand how users accept a technology. In our study, we used it for looking at perceived usefulness, social norm, behavioral intention, attitude toward use, and actual use of the AI extension.",
+                hard: [
+                    ["perceived", "pır-SİVD"],
+                    ["behavioral", "bi-HEY-vyı-rıl"],
+                    ["intention", "in-TEN-şın"],
+                ]
+            },
+            {
+                id: 9,
+                title: "The Tool: How It Works",
+                time: "~30 sn",
+                tr: "Öğrenci yazar → imleç durur → uzantı kodu alır → yapay zekaya gönderir → sidebar'da geri bildirim.",
+                script: "The student writes code in VS Code. When the cursor stays idle for a short time — or when code is selected — the extension sends that code to the AI model. Then, the feedback appears directly in the sidebar panel. No switching, no extra steps.",
+                hard: [
+                    ["extension", "eks-TEN-şın"],
+                    ["processes", "PROS-es-iz"],
+                ]
+            },
+            {
+                id: 10,
+                title: "Specifications",
+                time: "~30 sn",
+                tr: "Marketplace'ten kurulum. Otomatik veya manuel tetikleme. Birden fazla AI modeli. Ana dilde geri bildirim.",
+                script: "The extension is installed from the VS Code Marketplace. It can start automatically after three seconds of idle time, or manually when code is selected. It supports different AI models — ChatGPT, Gemini, and Claude. Feedback can also be given in the student's native language: Turkish, Spanish, or English.",
+                hard: [
+                    ["automatically", "o-tı-MAT-ik-li"],
+                    ["triggered", "TRİG-ırd"],
+                    ["native", "NEY-tiv"],
+                ]
+            },
+            {
+                id: 11,
+                title: "Key Features",
+                time: "~25 sn",
+                tr: "Ana vurgu: anında geri bildirim, bağlam değiştirmeme, prompt gerekmemesi, ana dil desteği.",
+                script: "The main benefit is that feedback is instant and stays inside the same workspace. Students do not need to switch to another platform, and they do not need to write prompts. This is especially helpful for beginners. Feedback in the native language can also reduce cognitive load.",
+                hard: [
+                    ["cognitive", "KOG-ni-tiv"],
+                    ["manually", "MAN-yu-ıl-i"],
+                ]
+            },
+            {
+                id: 12,
+                title: "Experimental Design",
+                time: "~35 sn",
+                tr: "Yarı deneysel, ön test–son test, tek oturum. Deney: uzantı kullandı. Kontrol: standart VS Code.",
+                script: "Our study used a quasi-experimental pre-test and post-test design. Both groups completed a Python test, then worked on a task in VS Code. The experimental group used the AI extension, while the control group used standard VS Code. After the activity, both groups took the post-test, and the experimental group also completed the TAM scale.",
+                hard: [
+                    ["quasi-experimental", "KVEY-zi eks-per-i-MEN-tıl"],
+                    ["practical", "PRAK-ti-kıl"],
+                ]
+            },
+            {
+                id: 13,
+                title: "Participants",
+                time: "~30 sn",
+                tr: "Ardahan Üniversitesi, 1. sınıf öğrencileri. 41 veri → 30 geçerli. 13 kontrol, 17 deney.",
+                script: "Participants were first-year students from the Computer Programming department at Ardahan University in Türkiye. Participation was voluntary, and all data were kept private. We collected 41 responses. After removing duplicates, 30 valid cases remained: 13 in the control group, and 17 in the experimental group.",
+                hard: [
+                    ["participants", "par-TİS-i-pınts"],
+                    ["inconsistent", "in-kın-SİS-tınt"],
+                ]
+            },
+            {
+                id: 14,
+                title: "Results: Learning Outcomes",
+                time: "~35 sn",
+                tr: "Her iki grup da gelişti. Ama gruplar arası fark istatistiksel olarak anlamlı değil.",
+                script: "Both groups improved significantly from pre-test to post-test. The control group went from 3.85 to 5.38, and the experimental group from 4.24 to 6.24. However, the overall difference between the two groups was not statistically significant.",
+                hard: [
+                    ["significantly", "sig-NİF-i-kınt-li"],
+                    ["statistically", "stı-TİS-tik-li"],
+                ]
+            },
+            {
+                id: 15,
+                title: "Results: Concept Map",
+                time: "~30 sn",
+                tr: "Deney: Strings ve Variables & Casting'de gelişti. Kontrol: yalnızca Variables & Casting. I/O'da değişim yok.",
+                script: "When we look at individual concepts, we see a clearer picture. The experimental group improved in Strings and in Variables and Casting. The control group improved only in Variables and Casting. For Input and Output, neither group showed significant change.",
+                hard: [
+                    ["individual", "in-di-VİC-yu-ıl"],
+                    ["significant", "sig-NİF-i-kınt"],
+                ]
+            },
+            {
+                id: 16,
+                title: "Results: TAM & Gender",
+                time: "~35 sn",
+                tr: "TAM: gruplar arası anlamlı fark yok. Deney grubu düşük ve değişken puan. Erkekler: Variables. Kadınlar: Strings.",
+                script: "For technology acceptance, we did not find significant differences between the groups. The experimental group showed lower TAM scores and higher variability — students did not all respond to the tool in the same way. We also saw gender-based differences: male students improved mainly in Variables and Casting, while female students improved mainly in Strings.",
+                hard: [
+                    ["variability", "vey-ri-ı-BİL-i-ti"],
+                    ["statistically", "stı-TİS-tik-li"],
+                ]
+            },
+            {
+                id: 17,
+                title: "Conclusions & Future Work",
+                time: "~40 sn",
+                tr: "Her iki grup gelişti ama AI üstün değil. Strings'te etkisi var. Katılım önemli. Gelecek: onboarding, uzun çalışma, adaptif geri bildirim.",
+                script: "To sum up: both groups improved, but the AI tool did not produce clearly better overall results. Still, it seems to have helped with Strings — which may suggest a form of personal feedback. One key point: AI only works when students really use it. In future work, we plan to improve onboarding, run longer studies, and explore more adaptive feedback.",
+                hard: [
+                    ["engagement", "en-GEYC-mınt"],
+                    ["adaptive", "ı-DAP-tiv"],
+                    ["effectiveness", "i-FEK-tiv-nis"],
+                ]
+            },
+            {
+                id: 18,
+                title: "Key Takeaway",
+                time: "~30 sn",
+                tr: "Ana mesajın bu. Yavaş ve güvenli söyle. Pause yap.",
+                script: "The key takeaway is simple: AI feedback works — but only when students actually engage with it. The success of AI in education is not only about the tool. It is also about trust, usability, and how students use it in real learning situations.",
+                hard: [
+                    ["takeaway", "TEYK-ı-wey"],
+                    ["usability", "yu-zı-BİL-i-ti"],
+                ]
+            },
+            {
+                id: 19,
+                title: "Questions & Discussion",
+                time: "~15 sn",
+                tr: "Teşekkür et. Sorulara açık olduğunu söyle. Gülümse.",
+                script: "Thank you very much for listening. I would be happy to answer your questions and discuss the study further.",
+                hard: []
+            }
+        ];
+
+        // State Variables
+        let current = 0;
+        let showTR = false;
+        let showPronunciation = false;
+        let fontSizeIndex = 1; // Default index (1.05rem)
+        const fontSizes = [0.9, 1.05, 1.25, 1.5];
+
+        // DOM Elements
+        const currentSlideNumEl = document.getElementById('currentSlideNum');
+        const progressBarEl = document.getElementById('progressBar');
+        const displaySlideNumberEl = document.getElementById('displaySlideNumber');
+        const displaySlideTitleEl = document.getElementById('displaySlideTitle');
+        const displaySlideTimeEl = document.getElementById('displaySlideTime');
+        const trReminderEl = document.getElementById('trReminder');
+        const trTextEl = document.getElementById('trText');
+        const scriptContentEl = document.getElementById('scriptContent');
+        const pronunciationSectionEl = document.getElementById('pronunciationSection');
+        const pronunciationToggleEl = document.getElementById('pronunciationToggle');
+        const pronunciationListEl = document.getElementById('pronunciationList');
+        const prevBtnEl = document.getElementById('prevBtn');
+        const nextBtnEl = document.getElementById('nextBtn');
+        const resetBtnEl = document.getElementById('resetBtn');
+        const fontDecreaseBtnEl = document.getElementById('fontDecreaseBtn');
+        const fontIncreaseBtnEl = document.getElementById('fontIncreaseBtn');
+        const toggleTRBtnEl = document.getElementById('toggleTRBtn');
+
+        // Update UI Function
+        function updateUI() {
+            const slide = slides[current];
+            const progress = ((current + 1) / slides.length) * 100;
+
+            // Update header info
+            currentSlideNumEl.textContent = current + 1;
+            progressBarEl.style.width = `${progress}%`;
+            displaySlideNumberEl.textContent = current + 1;
+            displaySlideTitleEl.textContent = slide.title;
+            displaySlideTimeEl.textContent = slide.time;
+
+            // Update TR reminder
+            if (showTR) {
+                trReminderEl.style.display = 'block';
+                trTextEl.textContent = slide.tr;
+            } else {
+                trReminderEl.style.display = 'none';
+            }
+
+            // Update script content with current font size
+            scriptContentEl.textContent = slide.script;
+            scriptContentEl.style.fontSize = `${fontSizes[fontSizeIndex]}rem`;
+
+            // Update pronunciation section
+            if (slide.hard && slide.hard.length > 0) {
+                pronunciationSectionEl.style.display = 'block';
+                if (showPronunciation) {
+                    pronunciationToggleEl.textContent = '▲ TELAFFUZ GİZLE';
+                    pronunciationToggleEl.classList.add('active');
+                    pronunciationListEl.style.display = 'flex';
+                    
+                    // Build pronunciation list
+                    pronunciationListEl.innerHTML = slide.hard.map(([word, phonetic]) => `
+                        <div class="pronunciation-item">
+                            <span class="pronunciation-word" style="font-size: ${fontSizes[fontSizeIndex] * 0.85}rem">${word}</span>
+                            <span class="pronunciation-phonetic" style="font-size: ${fontSizes[fontSizeIndex] * 0.9}rem">${phonetic}</span>
+                        </div>
+                    `).join('');
+                } else {
+                    pronunciationToggleEl.textContent = '▼ ZOR KELİMELER';
+                    pronunciationToggleEl.classList.remove('active');
+                    pronunciationListEl.style.display = 'none';
+                }
+            } else {
+                pronunciationSectionEl.style.display = 'none';
+            }
+
+            // Update navigation buttons state
+            prevBtnEl.disabled = current === 0;
+            nextBtnEl.disabled = current === slides.length - 1;
+            
+            if (current === slides.length - 1) {
+                nextBtnEl.classList.add('disabled-style');
+            } else {
+                nextBtnEl.classList.remove('disabled-style');
+            }
+
+            // Update TR button state
+            if (showTR) {
+                toggleTRBtnEl.classList.add('active');
+            } else {
+                toggleTRBtnEl.classList.remove('active');
+            }
+        }
+
+        // Navigation Function
+        function go(dir) {
+            current = Math.max(0, Math.min(slides.length - 1, current + dir));
+            showPronunciation = false; // Reset pronunciation on slide change
+            updateUI();
+        }
+
+        // Event Listeners
+        prevBtnEl.addEventListener('click', () => go(-1));
+        nextBtnEl.addEventListener('click', () => go(1));
+        
+        resetBtnEl.addEventListener('click', () => {
+            current = 0;
+            showPronunciation = false;
+            updateUI();
+        });
+
+        fontDecreaseBtnEl.addEventListener('click', () => {
+            fontSizeIndex = Math.max(0, fontSizeIndex - 1);
+            updateUI();
+        });
+
+        fontIncreaseBtnEl.addEventListener('click', () => {
+            fontSizeIndex = Math.min(3, fontSizeIndex + 1);
+            updateUI();
+        });
+
+        toggleTRBtnEl.addEventListener('click', () => {
+            showTR = !showTR;
+            updateUI();
+        });
+
+        pronunciationToggleEl.addEventListener('click', () => {
+            showPronunciation = !showPronunciation;
+            updateUI();
+        });
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                go(1);
+            }
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                go(-1);
+            }
+        });
+
+        // Initialize
+        updateUI();
+
+        // Prevent zoom on double tap (mobile)
+        document.addEventListener('touchend', (e) => {
+            e.preventDefault();
+        }, { passive: false });
+    </script>
+
+</body>
+</html>
